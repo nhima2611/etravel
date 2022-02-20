@@ -1,0 +1,130 @@
+@import './base';
+@import './variable';
+@import './mixin';
+@import './font';
+
+
+section {
+    height: 90vh;
+    margin: 15px;
+    overflow: hidden;
+    font-family: $font-poppins;
+}
+
+.slide {
+    position: relative;
+    @include flex-center;
+    justify-content: center;
+    width: 100%;
+}
+.slides {
+
+img {
+    width: 1440px;
+    height: 90vh;
+    object-fit: cover;
+    
+}
+
+.places{
+    position: absolute;
+    font-size: 5rem;
+    left: 10%;
+    top: 35%;
+    color: $main-color;
+    font-weight: 900;
+    text-shadow: 10px 0px 30px $header-color;
+    
+}
+.status {
+    position: absolute;
+    top: 52%;
+    left: 10%;
+    font-size: 20px;
+    color: $main-color;
+    
+}
+}
+.back {
+    position: absolute;
+    left: 4%;
+    color: $main-color;
+    cursor: pointer;
+    font-size: 25px;
+}
+.forward {
+    position: absolute;
+    right: 4%;
+    color: $main-color;
+    cursor: pointer;
+    font-size: 25px;
+
+}
+.buttons {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+
+    button {
+        padding: 10px 30px;
+        border: 3px solid $main-color;
+        color: $main-color;
+        text-transform: uppercase;
+        margin: 1rem;
+        cursor: pointer;
+        font-weight: bolder;
+        background-color: transparent;
+
+        &:hover{
+            background-color: $main-color;
+            color: $header-color;
+            transition: 1s;
+            transform: scale(120%);
+        }
+    }
+}
+
+.bottom {
+    color: $main-color;
+    p {
+        position: absolute;
+        bottom: 3%;
+        left: 3%;
+    }
+}
+
+@media screen and (max-width:960px) {
+        section {
+            width: 760px;
+        }
+
+        .slides {
+
+            img {
+                width: 1240px;
+                height: 90vh;
+                object-fit: cover;
+                
+            }
+            
+            .places{
+                position: absolute;
+                font-size: 3rem;
+                left: 10%;
+                top: 50%;
+                color: $main-color;
+                font-weight: 900;
+                text-shadow: 10px 0px 30px $header-color;
+                
+            }
+            .status {
+                position: absolute;
+                top: 60%;
+                left: 10%;
+                font-size: 14px;
+                color: $main-color;
+                
+            }
+            }
+            
+}

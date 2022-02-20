@@ -1,0 +1,44 @@
+@import './base';
+@import './variable';
+@import './mixin';
+@import './font';
+
+.second {
+    height: 100vh;
+    background-color: $header-color;
+    align-items: center;
+
+    h1 {
+
+        color: $main-color;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+}
+
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(2,350px);
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    padding: 20px;
+    img {
+        width: 100%;
+        border: 3px solid $main-color;
+        cursor: pointer;
+        &:hover{
+            transition: 1s ease-in;
+            transform: scale(125%);
+        }
+    }
+
+    p {
+        color: $main-color;
+    }
+        
+        
+    
+}
